@@ -1,0 +1,92 @@
+.contact-us {
+    padding: 40px 0;
+  }
+  
+  .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 10px;
+    color: #333;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  @media screen and (max-width: 600px) {
+    .form-container {
+      padding: 0 20px; /* Adjust padding for smaller screens */
+    }
+  
+    input,
+    textarea {
+      width: 100%; 
+    }
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .form-group {
+    width: calc(50% - 20px); /* Adjust the width based on your design */
+    margin-bottom: 10px;
+  }
+
+  #measurements {
+    width: 100%;
+  }
+  
+  /* Media Query for Mobile */
+  @media screen and (max-width: 600px) {
+    .form-group {
+      width: 100%; /* Make it full-width on smaller screens */
+    }
+  }
+
+  .button{
+    text-align: center;
+  }
+
+  .btns{
+    background-color: transparent;
+    color: black;
+    padding: 8px 20px;
+    border: 2px solid black;
+    transition: all 0.3s ease-out;
+  }
+  

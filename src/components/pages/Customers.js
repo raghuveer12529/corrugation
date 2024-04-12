@@ -12,33 +12,33 @@ export default function Customers() {
             <CardItem
               src='/images/customers_logo/aurobindo.jpg'
               text=''
-                          path='/services'
-                          label=''
+              path='/'
+            // label=''
             />
             <CardItem
               src='/images/customers_logo/coromandel.jpg'
               text=''
-              label=''
-              path='/services'
+              // label=''
+              path='/'
             />
           </ul>
           <ul className='cards__items'>
             <CardItem
               src='/images/customers_logo/drl.jpg'
               text=''
-              label=''
-              path='/services'
+
+              path='/'
             />
             <CardItem
               src='/images/customers_logo/eisai.jpg'
               text=''
-              label=''
+
               path='/products'
             />
             <CardItem
               src='/images/customers_logo/hetero.jpg'
               text=''
-              label=''
+
               path='/sign-up'
             />
           </ul>
@@ -46,37 +46,37 @@ export default function Customers() {
             <CardItem
               src='/images/customers_logo/hormann.jpg'
               text=''
-              label=''
-              path='/services'
+
+              path='/'
             />
             <CardItem
               src='/images/customers_logo/kaveri.jpg'
-                          text='
+              text='
               '
-              label=''
+
               path='/products'
             />
             <CardItem
               src='/images/customers_logo/mrf.jpg'
               text=''
-              label=''
+
               path='/sign-up'
             />
-                  </ul>
-                  <ul className='cards__items'>
+          </ul>
+          <ul className='cards__items'>
             <CardItem
               src='/images/customers_logo/msn.jpg'
               text=''
-              label=''
-              path='/services'
+
+              path='/'
             />
             <CardItem
               src='/images/customers_logo/paradise.jpg'
               text=''
-              label=''
+
               path='/products'
             />
-            
+
           </ul>
         </div>
       </div>

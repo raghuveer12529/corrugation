@@ -46,7 +46,7 @@ function Cards() {
             <CardItem
               src='images/6.jpeg'
               text='Cut-to-Cut Sheet Trimmer'
-              label='Mystery'
+              // label='Mystery'
               path='/services'
             />
             <CardItem

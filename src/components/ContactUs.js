@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import "./ContactUs.css";
-import { Button } from "./Button";
+
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    companyName:"",
+    phone:"",
+    description:"",
+    specifications:"",
+    quantity:"",
+    measurement:""
   });
 
   const handleChange = (e) => {
@@ -16,11 +21,41 @@ const ContactUs = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log("Form submitted:", formData);
+    
+    const formData = {
+      to: "raghu.veer1252@gmail.com",
+      subject: `"Request for quotation from ${formData.companyName}"`,
+      text: `Name: ${formData.name}
+      Email: ${formData.email}
+      Phone Number: ${formData.phone}
+      Description: ${formData.description}
+      
+      `
+      
+    };
+  
+    try {
+      const response = await fetch('http://localhost:3001/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData) // Convert data to JSON string
+      });
+  
+      if (response.ok) {
+        alert('Email sent successfully');
+      } else {
+        alert('Failed to send email');
+      }
+      console.log(response);
+    } catch (error) {
+      console.error(error.message);
+    }
   };
+  
 
   return (
     <div className="contact-us">
@@ -51,7 +86,7 @@ const ContactUs = () => {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
+            value={formData.phone}
             onChange={handleChange}
             required
           />
@@ -70,7 +105,7 @@ const ContactUs = () => {
           <textarea
             id="message"
             name="message"
-            value={formData.message}
+            value={formData.description}
             onChange={handleChange}
             required
           ></textarea>

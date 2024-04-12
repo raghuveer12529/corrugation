@@ -6,7 +6,7 @@ const AboutUs = () => {
     <div className="about-us">
       <div className="content-container">
         <p style={{ marginBottom: "20px" }}>
-          Welcome to <span style={{ color: "blue" }}>SRI MARUTI PACKAGING</span>, where we are committed to delivering
+          Welcome to <span style={{ color: "blue" }}>SRI MARUTI PACKAGINGS</span>, where we are committed to delivering
           exceptional products and services.
         </p>
         <p style={{ marginBottom: "20px" }}>

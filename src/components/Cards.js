@@ -31,7 +31,7 @@ function Cards() {
             />
             <CardItem
               src='images/4.jpeg'
-              text='Two Color Printer Slotter Machines - 5nos'
+              text='Rotary Dye Cut Machine'
               label='Adventure'
               path='/products'
             />
@@ -56,11 +56,21 @@ function Cards() {
               path='/products'
             />
             <CardItem
-              src='images/8.jpeg'
-              text='4 color Offset Printing Machine'
+              src='images/image.jpeg'
+              text='Reel to Sheet Cutting Machine'
               label='Adrenaline'
               path='/sign-up'
             />
+          </ul>
+          <ul className='cards__items'>
+            <CardItem
+              src='images/automatic_gluer.jpeg'
+              text='Automatic Gluer and Stritching Machine'
+              // label='Mystery'
+              path='/services'
+            />
+            
+            
           </ul>
         </div>
       </div>

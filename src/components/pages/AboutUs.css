@@ -1,4 +1,5 @@
 .about-us {
+  margin:150px;
     padding: 40px 0;
   }
   
@@ -44,5 +45,9 @@
     }
   
     
+  }
+
+  .mission-heading{
+    text-align: center;
   }
   

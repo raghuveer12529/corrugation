@@ -1,12 +1,24 @@
+import { useRef } from 'react';
 import '../../App.css';
-import Cards from '../Cards';
 import HeroSection from '../HeroSection';
+import Boxes from './Boxes/Boxes';
 
 function Home() {
+    const boxesRef = useRef(null);
+
+    const scrollToRef = () => {
+        console.log("TEXT", boxesRef)
+        if (boxesRef.current) {
+            boxesRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <>
-            <HeroSection />
-            <Cards />
+            <HeroSection scrollToRef={scrollToRef} />
+            <div ref={boxesRef}>
+                <Boxes />
+            </div>
         </>
     )
 }

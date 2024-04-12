@@ -13,6 +13,7 @@ const ContactUs = () => {
     quantity:"",
     measurement:""
   });
+  console.log("FORM DATA", formData)
 
   const handleChange = (e) => {
     setFormData({
@@ -24,16 +25,20 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     
-    const formData = {
-      to: "raghu.veer1252@gmail.com",
+    const data = {
+      to: "raghu.veer12529@gmail.com",
       subject: `"Request for quotation from ${formData.companyName}"`,
-      text: `Name: ${formData.name}
-      Email: ${formData.email}
-      Phone Number: ${formData.phone}
-      Description: ${formData.description}
-      
+      text: 
       `
-      
+      Name : ${formData ? formData.name : ''}
+      Company Name : ${formData ? formData.companyName : ''}
+      Email : ${formData ? formData.email : ''}
+      Phone Number : ${formData ? formData.phone : ''}
+      Description : ${formData ? formData.description :''}
+      Specifications : ${formData ? formData.specifications :''}
+      Qunatity : ${formData ? formData.quantity :''}
+      Measurement : ${formData ? formData.measurement :''}
+      `
     };
   
     try {
@@ -42,7 +47,7 @@ const ContactUs = () => {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData) // Convert data to JSON string
+        body: JSON.stringify(data) // Convert data to JSON string
       });
   
       if (response.ok) {
@@ -67,7 +72,7 @@ const ContactUs = () => {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
+            value={formData ? formData.name : ""}
             onChange={handleChange}
             required
           />
@@ -75,17 +80,17 @@ const ContactUs = () => {
           <label htmlFor="name">Company Name:</label>
           <input
             type="text"
-            id="name"
-            name="name"
-            value={formData.companyName}
+            id="companyName"
+            name="companyName"
+            value={formData ? formData.companyName : ''}
             onChange={handleChange}
             required
           />
           <label htmlFor="name">Phone:</label>
           <input
             type="text"
-            id="name"
-            name="name"
+            id="phone"
+            name="phone"
             value={formData.phone}
             onChange={handleChange}
             required
@@ -96,16 +101,16 @@ const ContactUs = () => {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
+            value={formData ? formData.email : ''}
             onChange={handleChange}
             required
           />
 
           <label htmlFor="message">Description of Box:</label>
           <textarea
-            id="message"
-            name="message"
-            value={formData.description}
+            id="description"
+            name="description"
+            value={formData ? formData.description : ''}
             onChange={handleChange}
             required
           ></textarea>
@@ -114,7 +119,7 @@ const ContactUs = () => {
             type="text"
             id="specifications"
             name="specifications"
-            value={formData.specifications}
+            value={formData ? formData.specifications : ''}
             onChange={handleChange}
             required
           />
@@ -125,7 +130,7 @@ const ContactUs = () => {
             type="text"
             id="quantity"
             name="quantity"
-            value={formData.quantity}
+            value={formData ? formData.quantity : ''}
             onChange={handleChange}
             required
           />
@@ -134,7 +139,7 @@ const ContactUs = () => {
             type="text"
             id="measurement"
             name="measurement"
-            value={formData.measurement}
+            value={formData ? formData.measurement: ''}
             onChange={handleChange}
             required
           />

@@ -23,16 +23,20 @@ const AboutUs = () => {
           organizations.
         </p>
         <p style={{ marginBottom: "20px" }}>We have setup corrugation units in the area far from pollution and in a quiet environment. Every unit is set according to the needs and Pros of the corrugation products. We have the factories with sophisticated machinery to manufacture corrugated products with skilled personnel to process the product as per the specifications of the customers.</p>
-        <h2>Our Mission</h2>
+        <h2 className="mission-heading" >OUR MISSION</h2>
         <p style={{ marginBottom: "20px" }}>
-          [Your Company Name] is on a mission to [briefly describe your
-          mission]. We strive to [goals and objectives].
+        <span style={{ color: "blue" }}>SRI MARUTI PACKAGINGS</span> is on a mission to expand gradually and automate the entire production workflow to provide our customers with top-of-the-line and fault-ressistant products.
         </p>
-        <h2>Why Choose Us?</h2>
-        <ul style={{ marginBottom: "20px" }}>
-          <li>Quality Products</li>
-          <li>Exceptional Service</li>
-          <li>Innovation</li>
+        <h2 className="mission-heading" style={{marginBottom: 20}}> WHY CHOOSE US?</h2>
+        <ul style={{  listStyle: "none", display: "flex", justifyContent: "space-around", marginBottom: "20px",  }}>
+          <li> ✅ Quality Products</li>
+          <li>  ✅ Timely Deliveries</li>
+          <li>  ✅ Competitve Rates</li>
+          {/* Add more reasons */}
+        </ul>
+        <ul style={{  listStyle: "none", display: "flex", justifyContent: 'space-evenly', marginBottom: "20px",  }}>
+          <li>  ✅ Reliability</li>
+          <li>  ✅ Professinalism</li>
           {/* Add more reasons */}
         </ul>
       </div>

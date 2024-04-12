@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Button } from "./Button";
 import './Navbar.css'
+import smp from '../smp.jpeg'
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -19,7 +19,7 @@ function Navbar() {
 
   useEffect(() => {
     showButton();
-  },[])
+  }, [])
 
   window.addEventListener('resize', showButton);
 
@@ -28,35 +28,44 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          <span style={{ color: "blue" }}>SMP</span>
+
+            <img src={smp} alt="Description of the image" className="logo" style={{
+              marginTop: '-5px',
+              width: '50px', // Example width
+              height: 'auto', // Maintains aspect ratio
+              borderRadius: '10px', // Example border radius
+              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // Example box shadow
+            }} />
           </Link>
-          <div className="menu-icon">
+          <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/" className={click ? "nav-links-mobile" : "nav-links"} onClick={closeMobileMenu}>
                 HOME
               </Link>
             </li>
+
+
             <li className="nav-item">
               <Link
                 to="/customers"
-                className="nav-links"
+                className={click ? "nav-links-mobile" : "nav-links"}
                 onClick={closeMobileMenu}
               >
-                CUSTOMERS
+                MACHINERY
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/aboutus" className="nav-links" onClick={closeMobileMenu}>
+              <Link to="/aboutus" className={click ? "nav-links-mobile" : "nav-links"} onClick={closeMobileMenu}>
                 ABOUT US
               </Link>
             </li>
             <li className="nav-item">
               <Link
                 to="/contact"
-                className="nav-links"
+                className={click ? "nav-links-mobile" : "nav-links"}
                 onClick={closeMobileMenu}
               >
                 GET A QUOTE

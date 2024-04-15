@@ -1,5 +1,4 @@
 .navbar {
-    /* background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%); */
     height: 80px;
     width: 100%;
     display: flex;
@@ -10,7 +9,6 @@
     top: 0;
     z-index: 999;
     background-color: white;
-    
   }
   
   .navbar-container {
@@ -18,7 +16,6 @@
     justify-content: center;
     align-items: center;
     height: 80px;
-
     max-width: 100%;
   }
   
@@ -88,6 +85,7 @@
 
     .fa-bars::before{
       color: #242222;
+      margin-right: 10px;
     }
   
     .nav-menu {
@@ -105,16 +103,17 @@
   
     .nav-menu.active {
       position: fixed; /* Fixes the position relative to the viewport */
-      width: 100%; /* Covers the entire width of the viewport */
       height: 100%; /* Covers the entire height of the viewport */
       width: 100%;
-      display: inline;
+      display: flex;
       background: #242222;
       top: 80px;
       left: 0;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
+      margin: 0 auto;
+      justify-content: center;
     }
   
     .nav-links {
@@ -151,6 +150,7 @@
     .fa-times {
       color: black;
       font-size: 2rem;
+      margin-right: 10px;
     }
   
     .nav-links-mobile {
@@ -173,6 +173,27 @@
       color: #242424;
       transition: 250ms;
     }
+
+    .navbar {
+      height: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      position: fixed;
+    }
+
+    .nav-item{
+      height: 10%;
+      width: 90%;
+      display: flex;
+      margin: 10px;
+      /* justify-content: space-between; */
+      align-items: center;
+    }
+
+    
   }
 
   .logo{
@@ -191,3 +212,18 @@
   .fa-bars::after{
     color: #242222;
   }
+
+  @media (max-width: 768px) {
+    .navbar {
+      position: fixed;
+      top: 0;
+      height: 80px;
+    }
+
+    .logo{
+      margin-top: -15px;
+      margin-left: 5px;
+    }
+  }
+
+  

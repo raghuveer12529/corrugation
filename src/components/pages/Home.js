@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import '../../App.css';
 import HeroSection from '../HeroSection';
 import Boxes from './Boxes/Boxes';
+import Navbar from '../Navbar';
 
 function Home() {
     const boxesRef = useRef(null);

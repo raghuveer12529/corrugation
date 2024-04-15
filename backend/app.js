@@ -1,17 +1,19 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import 'dotenv/config'
+import express from 'express';
+import { createTransport } from 'nodemailer';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+const json = bodyParser.json
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Use bodyParser to parse JSON in POST requests
-app.use(bodyParser.json());
+app.use(json());
 app.use(cors());
 
 // Set up a Nodemailer transporter
-const transporter = nodemailer.createTransport({
+const transporter = createTransport({
   service: 'gmail',
   auth: {
     user: 'raghu.veer12529@gmail.com', // Replace with your Gmail address
@@ -43,6 +45,6 @@ app.post('/send-email', (req, res) => {
 });
 
 // Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on port ${process.env.PORT}`);
 });

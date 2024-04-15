@@ -30,27 +30,27 @@ function Footer() {
           <div className='footer-link-items'>
             <h2>UNIT 1</h2>
             <p style={{ color: 'white', fontSize: '20px' }}>SRI MARUTI PACKAGINGS</p>
-            <p style={{ color: 'white' }}>Satyam Computer Road</p>
-            <p style={{ color: 'white' }}>Bahadurpally</p>
-            <p style={{ color: 'white' }}>Hyderabad-500055</p>
-            <p style={{ color: 'white' }}>India</p>
+            <p style={{ color: 'white' }}>Tech Mahindra Road,</p>
+            <p style={{ color: 'white' }}>Bahadurpally,</p>
+            <p style={{ color: 'white' }}>Hyderabad - 500 055,</p>
+            <p style={{ color: 'white' }}>INDIA.</p>
           </div>
           <div className='footer-link-items'>
             <h2>UNIT 2</h2>
             <p style={{ color: 'white', fontSize: '20px' }}>SRI MARUTI CORRUGATORS</p>
-            <p style={{ color: 'white' }}>Suraram Village</p>
-            <p style={{ color: 'white' }}>Quthbulapur Mandal</p>
-            <p style={{ color: 'white' }}>Hyderabad-500055</p>
-            <p style={{ color: 'white' }}>Inida</p>
+            <p style={{ color: 'white' }}>Suraram Village,</p>
+            <p style={{ color: 'white' }}>Quthbulapur Mandal,</p>
+            <p style={{ color: 'white' }}>Hyderabad - 500 055,</p>
+            <p style={{ color: 'white' }}>INDIA.</p>
 
           </div>
           <div className='footer-link-items'>
             <h2>UNIT 3</h2>
-            <p style={{ color: 'white', fontSize: '20px' }}>SRI IS PACKAGING INDUSTRIES</p>
-            <p style={{ color: 'white' }}>Sy. No: 618 & 61, Kalavacharla Road</p>
-            <p style={{ color: 'white' }}>Rajanagaram, Andhra Pradesh</p>
-            <p style={{ color: 'white' }}>RAJAHMUNDRY-533101</p>
-            <p style={{ color: 'white' }}>INDIA</p>
+            <p style={{ color: 'white', fontSize: '20px' }}>SRI I S PACKAGING INDUSTRIES</p>
+            <p style={{ color: 'white' }}>Sy. No: 618 & 619, Kalavacharlla Road,</p>
+            <p style={{ color: 'white' }}>Rajanagaram, Rajahmundry,</p>
+            <p style={{ color: 'white' }}>AP - 533 297,</p>
+            <p style={{ color: 'white' }}>INDIA.</p>
 
           </div>
         </div>
@@ -60,14 +60,9 @@ function Footer() {
         <div className='social-media-wrap'>
           <div className='footer-logo'>
             <Link to='/' className='social-logo'>
-              
-              <img src={smp} alt="Description of the image" style={{
-              width: '50px', // Example width
-              height: 'auto', // Maintains aspect ratio
-              borderRadius: '10px', // Example border radius
-              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // Example box shadow
-              marginLeft: '20px'
-            }} />
+              <div>
+              <img src={smp} alt="Description of the image"  />
+            </div>
             </Link>
           </div>
           <small className='website-rights'>SMP © 2024</small>
@@ -115,6 +110,10 @@ function Footer() {
           </div>
         </div>
       </section>
+      <div style={{color:'white'}}>
+
+      {/* <h4>Designed & Developed by Raghuveer</h4> */}
+      </div>
     </div>
   );
 }

@@ -30,7 +30,7 @@ function Navbar() {
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
 
             <img src={smp} alt="Description of the image" className="logo" style={{
-              marginTop: '-5px',
+
               width: '50px', // Example width
               height: 'auto', // Maintains aspect ratio
               borderRadius: '10px', // Example border radius
@@ -40,10 +40,16 @@ function Navbar() {
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
+          <div style={{justifyContent:'center',}}>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
               <Link to="/" className={click ? "nav-links-mobile" : "nav-links"} onClick={closeMobileMenu}>
                 HOME
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/aboutus" className={click ? "nav-links-mobile" : "nav-links"} onClick={closeMobileMenu}>
+                ABOUT US
               </Link>
             </li>
 
@@ -57,11 +63,7 @@ function Navbar() {
                 MACHINERY
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/aboutus" className={click ? "nav-links-mobile" : "nav-links"} onClick={closeMobileMenu}>
-                ABOUT US
-              </Link>
-            </li>
+            
             <li className="nav-item">
               <Link
                 to="/contact"
@@ -72,6 +74,7 @@ function Navbar() {
               </Link>
             </li>
           </ul>
+          </div>
           {/* {button && <Button buttonStyle="btn--outline">SIGN UP</Button>} */}
         </div>
       </nav>

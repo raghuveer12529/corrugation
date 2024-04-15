@@ -21,13 +21,13 @@ function Boxes() {
           <ul className='cards__items'>
             <CardItem
               src={image}
-              text='2 Ply Liner Roll'
+              text='2 Ply Liner Rolls'
               label='Machinery'
               path='/services'
             />
             <CardItem
               src={boardBox}
-              text='Board Box'
+              text='Mono Carton Boxes'
               label='Luxury'
               path='/services'
             />
@@ -35,19 +35,19 @@ function Boxes() {
           <ul className='cards__items'>
             <CardItem
               src={threePlySheet}
-              text='3 Ply Corrugated Sheet'
+              text='3 Ply Corrugated Sheets'
               label='Mystery'
               path='/services'
             />
             <CardItem
               src={fivePlySheet}
-              text='5 Ply Corrugated Sheet'
+              text='5 Ply Corrugated Sheets'
               label='Adventure'
               path='/products'
             />
             <CardItem
               src={threePlyBox}
-              text='3 Ply Corrugated Box'
+              text='3 Ply Corrugated Boxes'
               label='Adrenaline'
               path='/sign-up'
             />
@@ -55,7 +55,7 @@ function Boxes() {
           <ul className='cards__items'>
             <CardItem
               src={fivePlyBox}
-              text='5 Ply Corrugated Box'
+              text='5 Ply Corrugated Boxes'
               // label='Mystery'
               path='/services'
             />

@@ -65,7 +65,7 @@ const ContactUs = () => {
   return (
     <div className="contact-us">
       <div className="form-container">
-        <h1>DETAILS</h1>
+        <h1>PLEASE ENTER DETAILS</h1>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
           <input
@@ -124,7 +124,7 @@ const ContactUs = () => {
             required
           />
           <label htmlFor="quantity">
-            Quantity: (MOQ is 500no's for 5PLY and 1000no's for 3PLY){" "}
+            Quantity: (MOQ is 1000 no's for 5PLY and 2500 no's for 3PLY){" "}
           </label>
           <input
             type="text"

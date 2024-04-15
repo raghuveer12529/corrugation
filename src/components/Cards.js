@@ -5,19 +5,19 @@ import CardItem from './CardItem';
 function Cards() {
   return (
     <div className='cards'>
-      <h1>Checkout the Awesome machinery we use</h1>
+      <h1>Checkout the  machinery we use</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
             <CardItem
               src='images/1.jpeg'
-              text='High Speed Die Cut Punching Machine'
+              text='High Speed Die Cut Punching '
               label='Machinery'
               path='/services'
             />
             <CardItem
               src='images/2.jpeg'
-              text='High Speed Folder Gluer Machine'
+              text='High Speed Folder Gluer (FFG) '
               label='Luxury'
               path='/services'
             />
@@ -31,20 +31,20 @@ function Cards() {
             />
             <CardItem
               src='images/4.jpeg'
-              text='Rotary Dye Cut Machine'
+              text='Rotary Die Cut '
               label='Adventure'
               path='/products'
             />
             <CardItem
               src='images/5.jpeg'
-              text='4 color Offset Printing Machine'
+              text='4 color Offset Printing '
               label='Adrenaline'
               path='/sign-up'
             />
           </ul>
           <ul className='cards__items'>
-            <CardItem
-              src='images/6.jpeg'
+            {/* <CardItem
+              src='images/image.jpeg'
               text='Cut-to-Cut Sheet Trimmer'
               // label='Mystery'
               path='/services'
@@ -54,21 +54,22 @@ function Cards() {
               text='Two Color Printer Slotter Machines - 5nos'
               label='Adventure'
               path='/products'
-            />
+            /> */}
             <CardItem
               src='images/image.jpeg'
-              text='Reel to Sheet Cutting Machine'
+              text='Reel to Sheet Cutting '
               label='Adrenaline'
               path='/sign-up'
             />
-          </ul>
-          <ul className='cards__items'>
             <CardItem
               src='images/automatic_gluer.jpeg'
-              text='Automatic Gluer and Stritching Machine'
+              text='Auto Gluer and Stitcher '
               // label='Mystery'
               path='/services'
             />
+          </ul>
+          <ul className='cards__items'>
+            
             
             
           </ul>

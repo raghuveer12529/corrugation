@@ -111,8 +111,10 @@ function Footer() {
         </div>
       </section>
       <div style={{color:'white'}}>
+      <div style={{display: "flex", justifyContent: "flex-end"}}>
+         <h5>Developed by Raghuveer</h5>
+        </div>
 
-      {/* <h4>Designed & Developed by Raghuveer</h4> */}
       </div>
     </div>
   );

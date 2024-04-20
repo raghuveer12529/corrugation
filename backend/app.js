@@ -17,9 +17,10 @@ const transporter = createTransport({
   service: 'gmail',
   auth: {
     user: 'raghu.veer12529@gmail.com', // Replace with your Gmail address
-    pass: 'lult mmfc nhwz axpy' // Replace with your Gmail password or generate an app-specific password
+    pass: process.env.PASSWORD // Replace with your Gmail password or generate an app-specific password
   }
 });
+
 
 // Define a route to send emails
 app.post('/send-email', (req, res) => {
@@ -42,6 +43,13 @@ app.post('/send-email', (req, res) => {
     }
     res.status(200).send('Email sent: ' + info.response);
   });
+});
+
+
+// testing
+app.post('/message', (req, res) => {
+  const message = "heyy";
+  res.json({ receivedMessage: message });
 });
 
 // Start the server

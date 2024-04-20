@@ -1,3 +1,4 @@
+
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -9,6 +10,7 @@ import Customers from "./components/pages/Customers";
 import ContactUs from "./components/ContactUs";
 
 function App() {
+  console.log("TESTINGG", process.env.REACT_APP_HELLO_TESTING)
   return (
     <>
       <Router>

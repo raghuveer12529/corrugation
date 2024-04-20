@@ -201,4 +201,16 @@
     width: 50px; /* Example width */
   }
 
+  .footer-footer{
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: end;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* border: 1px solid red; */
+    /* background-color: #b1b1b1; */
+    padding: 10px;
+  }
+
   

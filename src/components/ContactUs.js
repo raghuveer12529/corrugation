@@ -26,7 +26,7 @@ const ContactUs = () => {
     e.preventDefault();
     
     const data = {
-      to: "raghu.veer12529@gmail.com",
+      to: "i.sivateja1188@gmail.com",
       subject: `"Request for quotation from ${formData.companyName}"`,
       text: 
       `
@@ -42,7 +42,7 @@ const ContactUs = () => {
     };
   
     try {
-      const response = await fetch('http://localhost:3001/send-email', {
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

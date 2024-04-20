@@ -110,12 +110,12 @@ function Footer() {
           </div>
         </div>
       </section>
-      <div style={{color:'white'}}>
-      <div style={{display: "flex", justifyContent: "flex-end"}}>
-         <h5>Developed by Raghuveer</h5>
+      
+      <div className='footer-footer'>
+         <h5>Developed by Raghuveer (+91 9299659344 )</h5>
         </div>
 
-      </div>
+  
     </div>
   );
 }

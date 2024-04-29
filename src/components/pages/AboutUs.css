@@ -42,13 +42,38 @@
     margin-bottom: 10px;
   }
 
+  .our-team {
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100%;
+    height: 180px;
+    margin: 10px;
+    justify-content: space-between;
+  }
+
+  .our-team img{
+    width: 150px;
+    border-radius: 50%;
+    /* border: 1px solid yellow; */
+
+    
+  }
+
+  .member-profile{
+    /* border: 1px solid black; */
+    /* padding: 20; */
+  }
+
   @media screen and (max-width: 600px) {
     .content-container {
       padding: 0 10px; /* Add horizontal padding for better readability */
     }
   
     .mission-heading {
-      font-size: 18px; /* Decrease font size for headings */
+      display: flex;
+      font-size: 18px;
+      justify-content: center; /* Decrease font size for headings */
+      align-items: center;
     }
   
     
@@ -60,7 +85,7 @@
   }
   
   .content-container p{
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .about-us li{
@@ -87,7 +112,7 @@
     }
 
     .content-container p{
-      font-size: 14px;
+      font-size: 10px;
       text-wrap: wrap;
       display: inline-block;
       line-height: 1.5;

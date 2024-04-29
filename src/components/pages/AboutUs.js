@@ -1,5 +1,6 @@
 import React from "react";
 import "./AboutUs.css";
+// import profilePic from '../../../public/images/profilePic.webp'
 
 const AboutUs = () => {
   return (
@@ -40,6 +41,30 @@ const AboutUs = () => {
         </ul>
         </div>
         <br/>
+        <h2 className="mission-heading" >OUR TEAM</h2>
+        <div className="our-team">
+          <div className="member-profile" >
+            <div style={{ display:'flex',justifyContent:'center', alignItems:'center'}}>
+
+          <img src='images/profilePic.webp'/>
+            </div>
+          <p>INTIPALLI SRINIVAS RAO</p>
+          </div>
+          <div className="member-profile" >
+            <div style={{ display:'flex',justifyContent:'center', alignItems:'center'}}>
+
+          <img src='images/profilePic.webp'/>
+            </div>
+          <p>INTIPALLI SAI TEJA</p>
+          </div>
+          <div className="member-profile" >
+            <div style={{ display:'flex',justifyContent:'center', alignItems:'center'}}>
+
+          <img src='images/profilePic.webp'/>
+            </div>
+          <p>INTIPALLI SIVA TEJA </p>
+          </div>
+        </div>
       </div>
     </div>
   );

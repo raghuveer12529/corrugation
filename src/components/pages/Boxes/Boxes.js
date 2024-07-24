@@ -9,6 +9,7 @@ import fivePlySheet from '../Boxes/assets/5_ply_sheet.jpeg'
 import threePlyBox from '../Boxes/assets/3_ply_corrugated_box.png'
 import fivePlyBox from '../Boxes/assets/5_ply_box.png'
 import partititon from '../Boxes/assets/partition.jpeg'
+import DieCut from '../Boxes/assets/DieCut.jpeg'
 
 function Boxes() {
  
@@ -30,6 +31,12 @@ function Boxes() {
               text='Mono Carton Boxes'
               label='Luxury'
               path='/services'
+            />
+            <CardItem
+              src={DieCut}
+              text='Die Cut Shipper'
+              label='Adrenaline'
+              path='/sign-up'
             />
           </ul>
           <ul className='cards__items'>

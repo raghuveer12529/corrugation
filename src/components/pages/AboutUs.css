@@ -1,133 +1,178 @@
 .about-us {
-  /* display: flex; */
   margin-top: 100px;
- padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container {
+  width: auto;
+  margin-left: 150px;
+  margin-right: 150px;
+  text-wrap: wrap;
+  padding: 10px;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+p {
+  line-height: 1.6;
+  color: #666;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.our-team {
+  display: flex;
+  width: 100%;
+  height: 180px;
+  margin: 10px;
+  justify-content: space-between;
+  margin-bottom: 75px;
+}
+
+.our-team img {
+  width: 150px;
+  border-radius: 50%;
+  /* border: 1px solid yellow; */
+}
+
+.member-profile {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.member-image {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid green; */
+}
+
+@media screen and (max-width: 600px) {
+  .content-container p {
+    font-size: 16px;
   }
-  
-  .content-container {
-    width: auto;
-    margin-left: 150px ;
-    margin-right: 150px;
-    text-wrap: wrap;
-  }
-  
-  h1, h2 {
-    color: #333;
-  }
-  
-  p {
-    line-height: 1.6;
-    color: #666;
-  }
-  
-  ul {
-    list-style-type: disc;
-    margin-left: 20px;
-  }
-  
-  .team-members {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-  }
-  
-  .team-member {
-    text-align: center;
-  }
-  
-  .team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+
+  .about-us {
+    padding-bottom: 50px;
   }
 
   .our-team {
-    /* border: 1px solid red; */
+    flex: 1;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  .member-profile {
+    margin-bottom: 20;
+  }
+
+  .member-image {
     display: flex;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid green; */
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mission-heading {
+    display: flex;
+    font-size: 18px;
+    justify-content: center; /* Decrease font size for headings */
+    align-items: center;
+    padding: 10px;
+  }
+}
+
+.mission-heading {
+  text-align: center;
+  font-size: 30px;
+  margin: 50px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container p {
+  font-size: 20px;
+}
+
+.about-us li {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .content-container p {
+    font-size: 18px;
+    text-wrap: wrap;
+    display: inline-block;
+    line-height: 1.4;
+  }
+
+  .choose-us {
     width: 100%;
-    height: 180px;
-    margin: 10px;
-    justify-content: space-between;
+    /* margin-left: -30px; */
   }
 
-  .our-team img{
-    width: 150px;
-    border-radius: 50%;
-    /* border: 1px solid yellow; */
-
-    
+  .choose-us ul li {
+    font-size: 16px;
   }
 
-  .member-profile{
-    /* border: 1px solid black; */
-    /* padding: 20; */
+  .about-us li {
+    font-size: 12px;
   }
 
-  @media screen and (max-width: 600px) {
-    .content-container {
-      padding: 0 10px; /* Add horizontal padding for better readability */
-    }
-  
-    .mission-heading {
-      display: flex;
-      font-size: 18px;
-      justify-content: center; /* Decrease font size for headings */
-      align-items: center;
-    }
-  
-    
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
-  .mission-heading{
+  ul li {
     text-align: center;
-    font-size: 30px;
+    font-size: 12px;
   }
-  
-  .content-container p{
-    font-size: 20px;
-  }
-
-  .about-us li{
-    font-size: 25px;
-  }
-
-  @media screen and (max-width: 768px) {
-    
-
-    .content-container {
-      width: 90%;
-      margin-left: 10px ;
-      margin-right: 10px;
-      
-    }
-
-    .choose-us{
-      width: 120%;
-      margin-left: -30px;
-    }
-
-    .about-us li{
-      font-size: 12px;
-    }
-
-    .content-container p{
-      font-size: 10px;
-      text-wrap: wrap;
-      display: inline-block;
-      line-height: 1.5;
-    }
-
-    
-
-    ul {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-
-    ul li {
-      text-align: center;
-      font-size: 12px;
-    }
-  }
+}

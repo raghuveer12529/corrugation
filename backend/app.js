@@ -16,7 +16,7 @@ app.use(cors());
 const transporter = createTransport({
   service: 'gmail',
   auth: {
-    user: 'raghu.veer12529@gmail.com', // Replace with your Gmail address
+    user: process.env.EMAIL, // Replace with your Gmail address
     pass: process.env.PASSWORD // Replace with your Gmail password or generate an app-specific password
   }
 });
@@ -24,11 +24,11 @@ const transporter = createTransport({
 
 // Define a route to send emails
 app.post('/send-email', (req, res) => {
-  const { to, subject, text } = req.body;
+  const { to, subject, text , from} = req.body;
   console.log("req",req.body); // Log the request body instead of the request object
   // Create an email message
   const mailOptions = {
-    from: 'raghu.veer12529@gmail.com',
+    from: from ,
     to: to,
     subject: subject,
     text: text

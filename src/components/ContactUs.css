@@ -11,6 +11,7 @@
   h1 {
     color: #333;
     text-align: center;
+    font-size: 30px; 
   }
   
   form {
@@ -29,9 +30,19 @@
     padding: 10px;
     margin: 5px 0 15px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 18px;
+    height: 60px;
+    box-sizing: border-box;
   }
+
+  input[type="text"],
+input[type="email"],
+textarea[id="description"],
+textarea {
+  height: 60px;
+  padding: 10px;
+}
   
   button {
     background-color: #007bff;
@@ -40,11 +51,13 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
   }
   
   button:hover {
-    background-color: #0056b3;
+    border: 0px;
+    background-color: #000FFF;
+    color: white;
   }
 
   @media screen and (max-width: 600px) {
@@ -82,6 +95,7 @@
 
   .button{
     text-align: center;
+    margin-top: 20px;
   }
 
   .btns{
@@ -91,4 +105,53 @@
     border: 2px solid black;
     transition: all 0.3s ease-out;
   }
+
+  button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+
+
+
+  .spinner {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top: 8px solid #007bff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto; /* Center the spinner */
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
   

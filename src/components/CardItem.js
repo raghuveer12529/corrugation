@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function CardItem(props) {
-  console.log({props})
   return (
     <>
       <li className='cards__item'>
@@ -12,6 +11,7 @@ function CardItem(props) {
               className='cards__item__img'
               alt='Image'
               src={props.src}
+              loading="lazy"
             />
           </figure>
           <div className='cards__item__info'>

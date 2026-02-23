@@ -3,7 +3,6 @@ import "./Button.css";
 import { Link } from "react-router-dom";
 
 const STYLES = ["btn--primary", "btn--outline"];
-
 const SIZES = ["btn--medium", "btn--large"];
 
 export const Button = ({
@@ -12,23 +11,33 @@ export const Button = ({
   onClick,
   buttonStyle,
   buttonSize,
-  linkTo
+  linkTo,
+  ...props
 }) => {
   const checkButtonStyle = STYLES.includes(buttonStyle)
     ? buttonStyle
     : STYLES[0];
 
-  const checkButtonSize = STYLES.includes(buttonSize) ? buttonSize : SIZES[0];
+  const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
+
+  const className = `btn ${checkButtonStyle} ${checkButtonSize} ${props.className || ""}`;
+
+  if (linkTo) {
+    return (
+      <Link to={linkTo} className={className}>
+        {children}
+      </Link>
+    );
+  }
 
   return (
-    <Link to={`${linkTo}`}>
-      <button
-        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-        onClick={onClick}
-        type={type}
-      >
-        {children}
-      </button>
-    </Link>
+    <button
+      className={className}
+      onClick={onClick}
+      type={type}
+      {...props}
+    >
+      {children}
+    </button>
   );
 };

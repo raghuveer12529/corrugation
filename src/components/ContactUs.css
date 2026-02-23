@@ -1,157 +1,128 @@
 .contact-us {
-    padding: 40px 0;
-    margin-top: 80px;
-  }
-  
-  .form-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  h1 {
-    color: #333;
-    text-align: center;
-    font-size: 30px; 
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  
-  label {
-    margin-top: 10px;
-    color: #333;
-  }
-  
-  input,
-  textarea {
-    padding: 10px;
-    margin: 5px 0 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 18px;
-    height: 60px;
-    box-sizing: border-box;
-  }
-
-  input[type="text"],
-input[type="email"],
-textarea[id="description"],
-textarea {
-  height: 60px;
-  padding: 10px;
+  padding: var(--spacing-section) 0;
+  margin-top: 80px;
+  /* Offset fixed header */
+  background-color: var(--bg-primary);
 }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
-  button:hover {
-    border: 0px;
-    background-color: #000FFF;
-    color: white;
+
+.form-container {
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
+  background: var(--bg-secondary);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+h1 {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+input,
+textarea {
+  padding: 12px 16px;
+  margin: 8px 0 16px 0;
+  border: 1px solid #ccc;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  min-height: 48px;
+  width: 100%;
+  font-family: var(--font-family);
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.button {
+  text-align: center;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.btns {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 12px 32px;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.btns:hover {
+  background-color: #004494;
+  /* Darker shade of primary */
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btns:disabled {
+  background-color: var(--color-secondary);
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner */
+.loading-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--color-white);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
 
-  @media screen and (max-width: 600px) {
-    .form-container {
-      padding: 0 20px; /* Adjust padding for smaller screens */
-    }
-  
-    input,
-    textarea {
-      width: 100%; 
-    }
+  100% {
+    transform: rotate(360deg);
   }
+}
 
-  .form-row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@media screen and (max-width: 768px) {
+  .form-container {
+    padding: 2rem;
   }
-  
-  .form-group {
-    width: calc(50% - 20px); /* Adjust the width based on your design */
-    margin-bottom: 10px;
-  }
-
-  #measurements {
-    width: 100%;
-  }
-  
-  /* Media Query for Mobile */
-  @media screen and (max-width: 600px) {
-    .form-group {
-      width: 100%; /* Make it full-width on smaller screens */
-    }
-  }
-
-  .button{
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .btns{
-    background-color: transparent;
-    color: black;
-    padding: 8px 20px;
-    border: 2px solid black;
-    transition: all 0.3s ease-out;
-  }
-
-  button[disabled] {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
-
-
-
-
-  .spinner {
-    border: 8px solid rgba(0, 0, 0, 0.1);
-    border-top: 8px solid #007bff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
-    margin: 0 auto; /* Center the spinner */
-  }
-  
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .spinner-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .loading-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  
-  
+}

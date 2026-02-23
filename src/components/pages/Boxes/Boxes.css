@@ -1,134 +1,177 @@
-.cards {
-    padding: 4rem;
-    background: #fff;
-    margin-top: 100px;
+/* Scoped styles for the Products Section */
+.products-section {
+  padding: var(--spacing-section) 0;
+  background: var(--bg-primary);
+  margin-top: 0;
+  /* Removing negative margin if present, simplifying */
+}
+
+.products-section h1 {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text-primary);
+}
+
+.products-section .cards__container {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  /* Reset flex if inherited */
+}
+
+/* GRID LAYOUT */
+.products-section .cards__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Default XL: 4 columns */
+  gap: var(--spacing-lg);
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* CARD STYLING */
+.products-section .cards__item {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  height: 100%;
+  margin: 0;
+  /* Reset margins */
+}
+
+.products-section .cards__item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.products-section .cards__item__link {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: none;
+  /* Reset improper shadows */
+  filter: none;
+}
+
+/* IMAGE CONTAINER */
+.products-section .cards__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+/* IMAGE */
+.products-section .cards__item__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0 !important;
+  /* Force remove padding */
+  transition: transform 0.3s ease-in-out;
+}
+
+.products-section .cards__item:hover .cards__item__img {
+  transform: scale(1.05);
+  padding: 0 !important;
+}
+
+/* TEXT CONTENT */
+.products-section .cards__item__info {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  background: var(--color-white);
+  border-top: 1px solid var(--bg-secondary);
+}
+
+.products-section .cards__item__text {
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* CTA SECTION */
+.products-section .cards__cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+}
+
+.products-section .btn-view-all {
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.products-section .btn-view-all:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Desktop (Large) - 3 Columns */
+@media screen and (max-width: 1200px) {
+  .products-section .cards__items {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  h1 {
-    text-align: center;
-    
+}
+
+/* Tablet - 2 Columns */
+@media screen and (max-width: 960px) {
+  .products-section .cards__items {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .cards h1{
-    font-size: 30px;
+  .products-section .cards__container {
+    width: 95%;
   }
-  
-  .cards__container {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    max-width: 1120px;
-    width: 90%;
-    margin: 0 auto;
+}
+
+/* Mobile - 1 Column */
+@media screen and (max-width: 600px) {
+  .products-section .cards__items {
+    grid-template-columns: 1fr;
   }
-  
-  .cards__wrapper {
-    position: relative;
-    margin: 50px 0 45px;
+
+  .products-section h1 {
+    font-size: 2rem;
   }
-  
-  .cards__items {
-    margin-bottom: 24px;
-  }
-  
-  .cards__item {
-    display: flex;
-    flex: 1;
-    margin: 0 1rem;
-    border-radius: 10px;
-  }
-  
-  .cards__item__link {
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
-    -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    border-radius: 10px;
-    overflow: hidden;
-    text-decoration: none;
-  }
-  
-  .cards__item__pic-wrap {
-    position: relative;
-    width: 100%;
-    padding-top: 60%;
-    overflow: hidden;
-  }
-  
-  .fade-img {
-    animation-name: fade-img;
-    animation-duration: 2s;
-  }
-  
-  /* .cards__item__pic-wrap::after {
-    content: attr(data-category);
-    position: absolute;
-    bottom: 0;
-    margin-left: 10px;
-    padding: 6px 8px;
-    max-width: calc((100%) - 60px);
-    font-size: 12px;
-    font-weight: 700;
-    color: #fff;
-    background-color: white;
-    box-sizing: border-box;
-  } */
-  
-  .cards__item__img {
-    position: absolute;
-    padding: 10px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    transition: all 0.2s linear;
-  }
-  
-  .cards__item__img:hover {
-    padding: 10px;
-    transform: scale(1);
-  }
-  
-  .cards__item__info {
-    padding: 20px 30px 30px;
-    color: #252e48;
-  }
-  
-  .cards__item__text {
-    color: #252e48;
-    font-size: 1rem; /* Adjust font size as needed */
-    word-wrap: break-word; /* Allow long words to wrap */
-    line-height: 30px;
-  }
-  
-  @media only screen and (min-width: 1200px) {
-    .content__blog__container {
-      width: 84%;
-    }
-  }
-  
-  @media only screen and (min-width: 1024px) {
-    .cards__items {
-      display: flex;
-    }
-  }
-  
-  @media only screen and (max-width: 1024px) {
-    .cards__item {
-      margin-bottom: 2rem;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .cards__item__text {
-      font-size: 1rem; /* Adjust font size for smaller screens */
-    }
-  }
+}

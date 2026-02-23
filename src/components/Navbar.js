@@ -1,81 +1,86 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom"; // Use NavLink for active styling
 import './Navbar.css'
 import smp from '../smp.jpeg'
+import { useWindowSize } from '../hooks/useWindowSize';
+import { Button } from "./Button";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
-  const handleClick = () => setClick(!click);
+  const { width } = useWindowSize();
 
+  const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
 
   useEffect(() => {
-    showButton();
-  }, [])
-
-  window.addEventListener('resize', showButton);
+    setButton(width > 960);
+  }, [width]);
 
   return (
     <>
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-
-            <img src={smp} alt="Description of the image" className="logo" style={{
-
-              width: '50px', // Example width
-              height: 'auto', // Maintains aspect ratio
-              borderRadius: '10px', // Example border radius
-              boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // Example box shadow
-            }} />
+            <img src={smp} alt="SRI MARUTI PACKAGINGS Logo" className="logo-image" />
           </Link>
-          <div className="menu-icon" onClick={handleClick}>
+          <div
+            className="menu-icon"
+            onClick={handleClick}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleClick();
+              }
+            }}
+            role="button"
+            tabIndex={0}
+            aria-label="Toggle navigation menu"
+            aria-expanded={click}
+          >
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
-          <div style={{justifyContent:'center',}}>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link to="/" className={click ? "nav-links-mobile" : "nav-links"} onClick={closeMobileMenu}>
+              <NavLink
+                to="/"
+                className={({ isActive }) => "nav-links" + (isActive ? " active" : "")}
+                onClick={closeMobileMenu}
+                end
+              >
                 HOME
-              </Link>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link to="/aboutus" className={click ? "nav-links-mobile" : "nav-links"} onClick={closeMobileMenu}>
+              <NavLink
+                to="/aboutus"
+                className={({ isActive }) => "nav-links" + (isActive ? " active" : "")}
+                onClick={closeMobileMenu}
+              >
                 ABOUT US
-              </Link>
+              </NavLink>
             </li>
-
-
             <li className="nav-item">
-              <Link
+              <NavLink
                 to="/customers"
-                className={click ? "nav-links-mobile" : "nav-links"}
+                className={({ isActive }) => "nav-links" + (isActive ? " active" : "")}
                 onClick={closeMobileMenu}
               >
                 MACHINERY
-              </Link>
+              </NavLink>
             </li>
-            
             <li className="nav-item">
-              <Link
+              <NavLink
                 to="/contact"
-                className={click ? "nav-links-mobile" : "nav-links"}
+                className={({ isActive }) => "nav-links-mobile" + (isActive ? " active" : "")} // Keep as link for mobile, button for desktop
                 onClick={closeMobileMenu}
               >
                 GET A QUOTE
-              </Link>
+              </NavLink>
             </li>
           </ul>
-          </div>
-          {/* {button && <Button buttonStyle="btn--outline">SIGN UP</Button>} */}
+          {/* Desktop CTA Button */}
+          {button && <Button buttonStyle="btn--primary" linkTo="/contact">GET A QUOTE</Button>}
         </div>
       </nav>
     </>
